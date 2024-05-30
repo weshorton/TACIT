@@ -10,9 +10,9 @@
 - [Input](#input)
 - [Output](#output)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
-
+- [Help](#Help)
+- [Citation](#citation)
 ## Introduction
 Identifying cell types and states remains a time-consuming and error-prone challenge for spatial biology. While deep learning is increasingly used, it is difficult to generalize due to variability at the level of cells, neighborhoods, and niches in health and disease. To address this, we developed TACIT, an unsupervised algorithm for cell annotation using predefined signatures that operates without training data, using unbiased thresholding to distinguish positive cells from background, focusing on relevant markers to identify ambiguous cells in multiomics assays.
 
@@ -27,7 +27,22 @@ Paper:
 4. Detailed analyses to understand the impact of mRNA only, protein only, and mRNA and protein (mixed) CELLxFEATURE matrices on cell identification and cell state analyses.
 
 ## Installation
-You can install the development version of CELESTA:
+
+### Hardware requirement
+
+CPU: i5
+
+Memory: 16G or more
+
+Storage: 10GB or more
+
+### Software requirement
+
+R version: >= 4.0 suggested
+
+### Install
+
+You can install the development version of TACIT:
 
 ```R
 # install.packages("devtools")
@@ -48,9 +63,17 @@ Features like probe intensity (protein antibodies) and count values (mRNA probes
 2. TYPExMARKER matrix: 
 The TYPExMARKER matrix is derived from expert knowledge, with values between 0 and 1, indicating the relevance of markers for defining cell types. ![signature](https://github.com/huynhkl953/TACITomics/blob/main/image/signature.png)
 
-Parameters
+Parameters:
 1. **r (resolution)**: Depends on the data but aims to create microcluster cell communities with sizes averaging between 0.1–0.5% of cells per microcluster. The higher the resolution, the greater the number of microclusters.
 2. **p (dimension)**: Number of dimensions used for microclusters.
+
+## Output
+
+TACIT Outputs:
+- **final_threshold**: Dataframe containing the threshold for each cell type relevant score.
+- **Group_threshold_data**: Binary matrix using the threshold values.
+- **data_clean_final**: Dataframe of final annotations.
+- **clusters**: Index of microclusters for each cell.
 
 
 ## Usage
@@ -68,7 +91,10 @@ print(TACIT)
 ```
 
 
+## Help
+If you encounter a clear bug, please file an issue with a minimal reproducible example on GitHub. For questions and other discussion, please email: huynhk4@vcu.edu.
 
-
+## Citation
+Spatial Deconvolution of Cell Types and Cell States at Scale Utilizing TACIT... https://doi.org/10.1038/s41592-023-02124-2.
 
 
