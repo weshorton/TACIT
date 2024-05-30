@@ -45,10 +45,10 @@ TACIT requires dependency on the following R packages:
 TACIT requires two inputs:
 1. CELLxFEATURE matrix: 
 Features like probe intensity (protein antibodies) and count values (mRNA probes) are quantified, normalized, and stored in a CELLxFEATURE matrix.
-(https://github.com/huynhkl953/TACITomics/blob/main/image/expression.png)
+(https://github.com/huynhkl953/TACIT/blob/main/image/expression.png)
 2. TYPExMARKER matrix: 
 The TYPExMARKER matrix is derived from expert knowledge, with values between 0 and 1, indicating the relevance of markers for defining cell types
-(https://github.com/huynhkl953/TACITomics/blob/main/image/signature.png)
+(https://github.com/huynhkl953/TACIT/blob/main/image/signature.png)
 
 
 ## Usage
