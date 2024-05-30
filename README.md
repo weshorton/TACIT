@@ -48,6 +48,10 @@ Features like probe intensity (protein antibodies) and count values (mRNA probes
 2. TYPExMARKER matrix: 
 The TYPExMARKER matrix is derived from expert knowledge, with values between 0 and 1, indicating the relevance of markers for defining cell types. ![signature](https://github.com/huynhkl953/TACITomics/blob/main/image/signature.png)
 
+Parameters
+1. **r (resolution)**: Depends on the data but aims to create microcluster cell communities with sizes averaging between 0.1–0.5% of cells per microcluster. The higher the resolution, the greater the number of microclusters.
+2. **p (dimension)**: Number of dimensions used for microclusters.
+
 
 ## Usage
 ```R
@@ -56,10 +60,10 @@ library(class)
 library(segmented)
 library(readr)
 
-data_expression=read_csv("expression.csv")
-Signature_matrix=read_csv("expression.csv")
+CELLxFEATURE=read_csv("CELLxFEATURE.csv")
+TYPExMARKER=read_csv("TYPExMARKER.csv")
 
-TACIT=TACIT(data_expression,Signature_matrix,r=10,p=10)
+TACIT=TACIT(CELLxFEATURE,TYPExMARKER,r=10,p=10)
 print(TACIT)
 ```
 
