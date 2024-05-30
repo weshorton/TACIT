@@ -1,0 +1,27 @@
+Package: TACIT
+Title: TACIT: Threshold based cell type assignment from single cell multiplex imaging data
+Version: 0.0.0.1
+Authors@R: 
+    person(given = "Khoa",
+           family = "Huynh",
+           role = c("aut", "cre"),
+           email = "huynhk4@vcu.edu")
+Description: Automate algorithm cell type identification using both CELLxPROTEIN and PROTEINxCELLTYPE information for spatial omics data.
+License: Apache License (>= 2)
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Imports:
+	Rmixmod,
+        Seurat,
+        segmented,
+        ggplot2,
+        dplyr,
+        readr,
+        data.table
+Depends: 
+    R (>= 2.10)
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
