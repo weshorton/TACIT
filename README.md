@@ -16,7 +16,7 @@
 ## Introduction
 Identifying cell types and states remains a time-consuming and error-prone challenge for spatial biology. While deep learning is increasingly used, it is difficult to generalize due to variability at the level of cells, neighborhoods, and niches in health and disease. To address this, we developed TACIT, an unsupervised algorithm for cell annotation using predefined signatures that operates without training data, using unbiased thresholding to distinguish positive cells from background, focusing on relevant markers to identify ambiguous cells in multiomics assays.
 
-Using five datasets (4,600,000-cells; 51-cell types) from three niches (colon, intestine, gland), TACIT outperformed existing unsupervised methods in accuracy and scalability. Integration of TACIT-identified cells with a novel Shiny app revealed new phenotypes in two inflammatory gland diseases. Finally, using combined spatial transcriptomics and proteomics, we discover under- and overrepresented immune cell types and states in regions of interest, suggesting multimodality is essential for translating spatial biology to clinical applications.
+Using five datasets (5,000,000-cells; 50-cell types) from three niches (colon, intestine, gland), TACIT outperformed existing unsupervised methods in accuracy and scalability. Integration of TACIT-identified cells with a novel Shiny app revealed new phenotypes in two inflammatory gland diseases. Finally, using combined spatial transcriptomics and proteomics, we discover under- and overrepresented immune cell types and states in regions of interest, suggesting multimodality is essential for translating spatial biology to clinical applications.
 
 Paper: 
 
@@ -95,6 +95,6 @@ print(TACIT)
 If you encounter a clear bug, please file an issue with a minimal reproducible example on GitHub. For questions and other discussion, please email: huynhk4@vcu.edu.
 
 ## Citation
-Spatial Deconvolution of Cell Types and Cell States at Scale Utilizing TACIT... https://doi.org/10.1038/s41592-023-02124-2.
+Spatial Deconvolution of Cell Types and Cell States at Scale Utilizing TACIT https://www.biorxiv.org/content/10.1101/2024.05.31.596861v1.abstract.
 
 
