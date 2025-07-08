@@ -1102,10 +1102,7 @@ FastRunUMAP <- function(seurat_obj,
     min_dist = min.dist,
     ret_model = TRUE,
     n_epochs = 200, # Reduced for speed
-    n_threads = future::availableCores() - 1,
-    n_sgd_threads = "auto",
-    batch = TRUE, # Use batched processing
-    verbose = verbose
+    n_sgd_threads = "auto"
   )
   
   if (verbose) message("Projecting all cells onto UMAP model...")
@@ -1116,9 +1113,7 @@ FastRunUMAP <- function(seurat_obj,
     all_umap <- uwot::umap_transform(
       X = input_data,
       model = umap_model,
-      n_threads = future::availableCores() - 1,
-      n_sgd_threads = "auto",
-      verbose = verbose
+      n_sgd_threads = "auto"
     )
   } else {
     # For very large datasets, process in chunks
@@ -1135,9 +1130,7 @@ FastRunUMAP <- function(seurat_obj,
       all_umap[start_idx:end_idx, ] <- uwot::umap_transform(
         X = chunk_data,
         model = umap_model,
-        n_threads = future::availableCores() - 1,
-        n_sgd_threads = "auto",
-        verbose = TRUE
+        n_sgd_threads = "auto"
       )
     }
   }
